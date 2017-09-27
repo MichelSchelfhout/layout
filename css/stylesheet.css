@@ -38,7 +38,7 @@ h1{
 
     display: inline-block;
     width: 100%;
-    float: left;
+
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
@@ -323,3 +323,74 @@ a{
    }
     
 }
+
+@media  (min-width: 768px){
+
+    .flex-container{ 
+        
+        height: 100%;
+        flex-direction: column;
+        padding-left: 0px;
+        margin: 0 auto;
+        width: 103%;
+      
+     }
+    
+    header{
+        
+        height: 100%;
+        flex-direction: column;
+        margin: 0;
+        width: 103%;
+    
+    }
+
+    
+     .flex-item3 img{
+
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+     }
+
+   #netflix, #imdb{
+        margin-left: 9px;
+        
+   }
+
+    
+   p{
+
+    padding-left: 10px;
+   }
+
+   .flex-item1{
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 97%;
+    height: 100%;  
+    margin-top: 50px;
+    
+}
+
+    .topitem1{
+
+        height: 250px;
+    }
+
+    h2{
+
+        padding-left: 5px;
+    }
+
+
+  
+    
+}
+
+
+    
+
