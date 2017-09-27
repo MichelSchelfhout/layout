@@ -1,7 +1,3 @@
-
-
-
-
 *{
 
     padding: 0;
@@ -12,10 +8,10 @@
 
 header{
     
-
+    
     z-index: 50;
     position: relative;
-    width: 801px;
+    width: 100%;
     background-color: rgba(112, 114, 117, 0.7);  
     margin: 0 auto;
     height: 290px;
@@ -53,7 +49,7 @@ h1{
 nav{
     
     display: inline-block;
-    width: 801px;
+    width: 100%;
     height: 44px;
     background-color: #333333;
 }
@@ -125,26 +121,10 @@ ul li ul li{
     display: block;
 
 }
-ul li ul li ol{
-
-    width: 0;
-    overflow: hidden;
-    left: -180px;
-    opacity: 0;
-    top: 0;
-    transition: 0.3s ease;
-    list-style:none;
-    position: absolute;
-}
 
 
-ul li ul li:hover ol{
-    width: 180px;
-    background-color: #333333;
-    transition: 0.3s ease;
-    overflow: initial;
-    opacity: 1;
-}
+
+
 
 #films{
 
@@ -172,69 +152,94 @@ main{
 
 #netflix{
 
-    
+    display: flex;
     z-index: 1000;
-    display: block;
-    width: 400px;
-    height: 300px;
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 70px;
+    width: 300px;
+    height: 200px;
+    
+    margin-top: 10px;
+    margin-bottom: 150px;
+    margin-right: 25px;
 
 }
 
 #imdb{
 
-    display: block;
-    width: 400px;
-    height: 300px;
-    float: right;
+    display: flex;
+    width: 300px;
+    height: 200px;
+    
+    margin-top: 200px;
     margin-bottom: 10px;
-    margin-right: 70px;
+    margin-right: 25px;
     
 }
 
 aside{
-    
-    position: relative;
-    margin-left: 0 auto;
-    float: right;
-    width: 1px;
+    margin-top: 100px;
+    margin-left: 25px;
 }
 
 .flex-container {
     
-    
-    margin: 0 auto;
     display: flex;
-    width: 800px;
+    margin: 0 auto;
+    width: 1100px;
     height: 100%;
     position: relative;
+    flex-direction: row;
 }
 
 .flex-item1{
     
-    flex-direction: column;
+    
+    flex-direction: row;
     background-color: rgba(0, 0, 0, 0.6);
     width: 300px;
-    height: 300px;
-    margin: 10px;
-    margin-bottom: 100px;
+    height: 300px;  
     margin-top: 50px;
     
 }
 
-.flex-item2{
-    
-    margin-top: 50px;
-    flex-direction: column;
+
+.flex-item3{
+ 
+    margin-top: 25px;
+    flex-direction: row;
     background-color: rgba(0, 0, 0, 0.6);
-    width: 300px;
-    height: 300px;
-    margin: 10px;
+    width: 80%;
+    height: 95%;
+    margin-left: 10px;
+    margin: 0 auto;
+
+
+}
+.item1:nth-of-type(1)
+{
+    order:1;
+}
+.item1:nth-of-type(2)
+{
+    order:2;
+}
+.item2:nth-of-type(1)
+{
+    order:1;
+}
+.item2:nth-of-type(2)
+{
+
+    order:2;
+}
+
+.div{
+
+    display: flex;
+    flex-direction: column;
 }
 
 div{
+    
 
     margin: 0 auto;
     padding-left: 10px;
@@ -269,15 +274,51 @@ a{
     height: 100px;
 }
 
-@media screen and (max-width: 1080px){
-    
-      .flex-item1, .flex-item2{
-        flex-direction: row;
-    }
-    aside{
-        display: block;
-    }
-    
+.topitem2{
+
+
+    width: 400px; 
+    height: 200px;
 }
 
 
+@media  (max-width: 1080px) {
+    
+    header, .flex-container, main{ 
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+}
+
+@media  (max-width: 480px) {
+    
+    .flex-container{ 
+        
+        height: 100%;
+        flex-direction: column;
+        padding-left: 10px;
+        margin: 0;
+      
+     }
+    
+    header{
+        
+        height: 100%;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    
+    }
+    
+     .flex-item3 img{
+
+        width: 100%;
+        margin: 0px;
+     }
+
+   #netflix, #imdb{
+        margin-left: 15px;
+
+   }
+    
+}
